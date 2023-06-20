@@ -1,0 +1,127 @@
+// !=========================================================
+// !                    MIXINS
+// !=========================================================
+// @mixin media-xsm {
+//   @media screen and (min-width: 0px) {
+//     @content;
+//   }
+// }
+
+// @mixin media-sm {
+//   @media screen and (min-width: 576px) {
+//     @content;
+//   }
+// }
+
+// @mixin media-md {
+//   @media screen and (min-width: 768px) {
+//     @content;
+//   }
+// }
+
+// @mixin media-lg {
+//   @media screen and (min-width: 1024px) {
+//     @content;
+//   }
+// }
+
+// @mixin media-xl {
+//   @media screen and (min-width: 1600px) {
+//     @content;
+//   }
+// }
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+/* section */
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+  }
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90vw;
+  margin-top: 5rem;
+  max-width: $fixed-width;
+  background: $clr-white;
+  border-radius: $radius;
+  padding: 1.5rem 2rem;
+  box-shadow: $dark-shadow;
+}
+.container h3 {
+  font-weight: normal;
+  text-transform: none;
+  margin-bottom: 0rem;
+}
+.person {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+.person img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: $light-shadow;
+}
+.person h4 {
+  margin-bottom: 0.35rem;
+}
+.person p {
+  margin-bottom: 0;
+}
+.container button {
+  color: $clr-black;
+  display: inline-block;
+  width: 40%;
+  border-color: transparent;
+  background: $clr-primary-6;
+  margin: 2rem 1rem 0 1rem;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  letter-spacing: $spacing;
+  border-radius: $radius;
+  outline: 1px solid rgba(242, 138, 178, 0.8);
+  cursor: pointer;
+}
